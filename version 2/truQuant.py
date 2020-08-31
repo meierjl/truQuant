@@ -410,7 +410,7 @@ def run_truQuant(annotation_extension, percent_for_blacklisting, truQuant_region
     # Run tsrFinder on the first file
     os.system("tsrFinderM1I " + blacklisted_first_sequencing_file + " 150 20 30 600 " + hg38_chrom_sizes_file)
 
-    tsr_file = blacklisted_first_sequencing_file.replace(".bed", "_150_20_30_600-TSR.tab")
+    tsr_file = blacklisted_first_sequencing_file.replace(".bed", "-TSR.tab")
 
     paused_region_filename = output_directory + os.path.basename(tsr_file).replace('-TSR.tab', '-paused_regions.bed')
     gene_body_region_filename = output_directory + os.path.basename(tsr_file).replace('-TSR.tab',
